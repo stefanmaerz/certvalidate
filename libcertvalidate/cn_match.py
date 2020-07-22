@@ -11,15 +11,13 @@ from libcertvalidate.lib.subject_dn import subject_dn
 
 ###############################################################################################
 #   CN_match function:                                                                        #
-#    Verifies that the x509 subject Common Name matches the User so we don't inadvertantly    #
-#    cross assign a ssh public key to the wrong user because an IdP has bad data.             #
-#    In other words we are validating that the IdP has correct data.                          #
-#    This is important since we will strip the metta data from the x509 certs when we generate#
-#    our ssh pub keys.                                                                        #
-#    This is a hard problem. For example, CHRISTOPHER MUZYN != CHRIS MUZYN, so we can't do    #
+#    CN Matching verifies that the common name in the subject of a given x509 certs  is       #
+#    assocaited with an identity.
+#    This is a hard problem. For example, CHRISTOPHER != CHRIS, so we can't do                #
 #    simple string parsing. Instead I leveraged some fuzzy text parsing to solve the problem  #
 #    for me. One such tool is taken from the feild of information Theory and called           #
 #    Levenshtein distance: https://en.wikipedia.org/wiki/Levenshtein_distance                 #
+#    However this has the clear downside of the result being probabilistic                    #
 #   PRECONDITION: Accepts a PEM ecoded certificate and one or two idnetifier strings          #
 #   POSTCONDITION: Returns a bool:                                                            #
 #    True = one of the identifier strings is in the Common name (valid).                      #

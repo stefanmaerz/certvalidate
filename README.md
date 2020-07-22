@@ -1,2 +1,7 @@
-# certvalidate
-Landing place to put my python libraries which can be used to validate x509 certificates. Once I get the open source licence in place, i will stick here.
+# x509 certificate validation libraries
+** Note, this is currenlty BETA software **
+These libraries can be used to validate x509 libraries. Supported functionality includes:
+1) certificate chain validations
+2) certificate expiration validations
+3) Certificate Revocation list validations
+4) common name matching

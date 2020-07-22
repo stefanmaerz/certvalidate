@@ -17,8 +17,8 @@ LOG = logging.getLogger(__name__)
 
 ###############################################################################################
 #   verify function:                                                                          #
-#    Verifies the chain of trust for a certificate to validate whether or not it is a properly#
-#    Issued Certificate.                                                                      #
+#    Cryptographically verifies the chain of trust for a given certificate to validate whether#
+#    or not it is a properly issued Certificate.                                              #
 #   PRECONDITION: Accepts a PEM ecoded certificate.                                           #
 #   POSTCONDITION: Returns 3 things:                                                          #
 #   1) a Boolean Value:                                                                       #

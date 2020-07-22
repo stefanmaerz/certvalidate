@@ -16,6 +16,8 @@ LOG = logging.getLogger(__name__)
 ###############################################################################################
 #   crl_check() function:                                                                     #
 #    Checks a certificate against its Certificate Revocation List (CRL)                       #
+#    It parses out the CRL distribution point for you, downloads the CRL, digitally validates #
+#    The signature of the CRL, then checks to see if your cert is in the CRL.                 #
 #   PRECONDITION: Accepts PEM encoded cert.                                                   #
 #   POSTCONDITION: Returns a bool:                                                            #
 #                   - True = cert is revoked                                                  #
