@@ -3,13 +3,8 @@ import os
 import subprocess
 
 #TODO: Parse this from a yaml config file
-CA_TRUST = [("ORNLCAROOT.crt", "ORNLCASC.crt"),
-            ("ORNLCAROOT02.crt", "ORNLCASC02.crt"),
-            ("Entrust2019root.pem", "Entrust2019SSA.pem"),
-            ("Entrust2025root.pem", "Entrust2025SSA.pem"),
-            ("Entrust2029root.pem", "Entrust2029SSA.pem"),
-            ("ORNLRootCAv1.pem", "ORNLCA1v1.pem"),
-            ("ORNLRootCAv1.pem", "ORNLCA2v1.pem")]
+CA_TRUST = [("ROOT1.crt", "LEAF1.crt"),
+            ("ROOT2.crt", "LEAF2.crt"),
 CA_DIR = 'cadir'
 
 
