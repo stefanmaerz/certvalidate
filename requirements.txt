@@ -1,4 +1,4 @@
-cryptography==3.2.1
+cryptography==3.3.2
 whoswho==0.2.1
 fuzzywuzzy==0.18.0
 python-Levenshtein==0.12.0
